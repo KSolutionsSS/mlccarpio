@@ -5,3 +5,20 @@ body {
 a {
     color: #00B7FF;
 }
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 12px 0 0 0;
+    font-size: x-small;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 5px 0 7px;
+}
+
+footer ul li:not(:first-child) {
+    border-left: 1px white solid;
+}
