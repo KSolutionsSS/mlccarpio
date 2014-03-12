@@ -6,7 +6,26 @@ a {
     color: #00B7FF;
 }
 
-footer {
+footer > .row:not(:last-child) {
+    background-color: indianred;
+}
+
+footer > .row:nth-child(1) {
+    height: 5px;
+    border-bottom: 1px solid white;
+}
+
+footer > .row:nth-child(2) {
+    height: 3px;
+    border-bottom: 0.5px dashed white;
+}
+
+footer > .row:nth-child(3) {
+    height: 120px;
+    border-top: 1px dashed white;
+}
+
+footer > .row:last-child {
     text-align: center;
     background-color: black;
     color: white;
@@ -14,11 +33,11 @@ footer {
     font-size: x-small;
 }
 
-footer ul li {
+footer > .row:last-child ul li {
     display: inline-block;
     padding: 0 5px 0 7px;
 }
 
-footer ul li:not(:first-child) {
+footer > .row:last-child ul li:not(:first-child) {
     border-left: 1px white solid;
 }
