@@ -1,17 +1,43 @@
-body {
-    padding-top: 50px;
-}
-
-/*a {*/
-/*color: #00B7FF;*/
-/*}*/
-
 h3 {
     padding: 0 20px;
     font-size: large;
     border-bottom: 1px solid black;
     color: indianred;
     font-style: italic;
+}
+
+header {
+    background-color: black;
+}
+
+header > .row:first-child {
+    height: 60px;
+    border-bottom: 1px dotted white;
+}
+
+header > .row:last-child {
+    height: 7px;
+}
+
+/*****************************************************************************/
+/*  HOME STYLES */
+/*****************************************************************************/
+
+.tab-content-parent, .tab-content {
+    border: 1px solid #dddddd;
+}
+
+.tab-content-parent {
+    padding: 10px 20px 7px 20px;
+    border-top: none;
+}
+
+/*****************************************************************************/
+/*  CONTACT FOOTER STYLES */
+/*****************************************************************************/
+
+.contact-footer {
+    margin-bottom: 150px;
 }
 
 .contact-footer li > span {
