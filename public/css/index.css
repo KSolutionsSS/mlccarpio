@@ -4,18 +4,32 @@
     font-weight: bold;
 }
 
-h3 {
-    font-size: large;
-    color: rgb(189, 98, 98);
-    font-style: italic;
+body {
+    background-image: url('../img/fondo_ornamental_gris%20clarito-01.png');
+    color: black;
+}
+
+h2, h3 {
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
+    color: rgb(189, 98, 98);
+    font-style: italic;
+}
+
+h2 {
+    font-style: italic;
+    margin-bottom: 25px;
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
     padding-left: 20px;
     margin-bottom: 20px;
 }
 
-body {
-    background-image: url('../img/fondo_ornamental_gris%20clarito-01.png');
+p {
+    margin-bottom: 25px;
 }
 
 header {
@@ -30,7 +44,7 @@ header img {
     left: 15%;
 }
 
-div.container {
+body > div.container {
     margin-top: -1px;
 }
 
@@ -64,6 +78,14 @@ div.container {
 .tab-content-parent {
     padding: 10px 20px 7px 20px;
     border-top: none;
+}
+
+/*****************************************************************************/
+/*  PROFILE STYLES */
+/*****************************************************************************/
+
+#profile .my-content {
+    padding-right: 100px;
 }
 
 /*****************************************************************************/
