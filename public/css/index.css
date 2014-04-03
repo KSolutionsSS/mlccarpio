@@ -1,14 +1,28 @@
 h3 {
-    padding: 0 20px;
     font-size: large;
-    border-bottom: 1px solid black;
-    color: indianred;
+    color: rgb(189, 98, 98);
     font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: url('../img/fondo_ornamental_gris%20clarito-01.png');
 }
 
 header {
     background-image: url('../img/animalprint-01-01.png');
     height: 61px;
+}
+
+#container > .tab-content-parent, #container > ul > li {
+    background-color: white;
+}
+
+.layout-opacity {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /*****************************************************************************/
@@ -32,8 +46,27 @@ header {
     margin-bottom: 150px;
 }
 
-.contact-footer li > span {
+.contact-footer ul {
+    padding-left: 20px;
+}
+
+.contact-footer li p {
+    padding-top: 10px;
+}
+
+.contact-footer li span {
     color: indianred;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contact-footer li {
+    list-style: none;
+}
+
+.contact-footer #socialNetworks li:first-child {
+    background: url('../img/logo_facebook-01.png') no-repeat left center;
+    height: 46px;
+    padding-left: 55px;
 }
 
 /*****************************************************************************/
