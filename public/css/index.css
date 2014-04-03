@@ -23,12 +23,23 @@ header {
     height: 61px;
 }
 
+header img {
+    position: absolute;
+    z-index: 999;
+    top: 4%;
+    left: 15%;
+}
+
 div.container {
     margin-top: -1px;
 }
 
 #container > .tab-content-parent {
     background-color: white;
+}
+
+#container > ul > li:first-child {
+    margin-left: 200px;
 }
 
 #container > ul > li > a {
