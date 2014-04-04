@@ -225,6 +225,17 @@ footer > .row:last-child ul li:not(:first-child) {
     border-left: 1px white solid;
 }
 
+footer > .row:last-child ul li a {
+    color: white;
+    font-style: italic;
+    transition: color 2s;
+}
+
+footer > .row:last-child ul li a:hover {
+    color: indianred;
+    text-decoration: none;
+}
+
 /*****************************************************************************/
 /*  OVERRIDE BOOTSTRAP STYLES */
 /*****************************************************************************/
