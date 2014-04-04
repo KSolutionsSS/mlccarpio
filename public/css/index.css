@@ -100,7 +100,7 @@ body > div.container {
 /*****************************************************************************/
 
 #profile .my-content {
-    padding-right: 100px;
+    padding-right: 85px;
 }
 
 #profile {
@@ -118,6 +118,8 @@ body > div.container {
 
 .contact-footer ul {
     padding-left: 20px;
+    z-index: 1;
+    position: relative;
 }
 
 .contact-footer li p {
