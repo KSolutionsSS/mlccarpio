@@ -40,6 +40,7 @@
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
                     <li><a href="#profile" data-toggle="tab">Qui&eacute;n soy</a></li>
+                    <li><a href="#services" data-toggle="tab">Servicios</a></li>
                 </ul>
                 <div class="rounded-header">
                 </div>
@@ -82,6 +83,14 @@
                                         <p><strong>Vivo y Respiro diseño y cuando no lo estoy haciendo,
                                             me encontrarás tratando de conquistar al mundo!!!</strong></p>
                                         <img src="../img/firma-01.png" class="pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="services">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="my-content">
                                     </div>
                                 </div>
                             </div>
@@ -139,10 +148,34 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script src="../js/lib/jssor.slider.mini.js"></script>
+<script src="../js/lib/jsrender.min.js"></script>
+<script src="../js/lib/google-docs-simple-parser.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/x-jsrender" id="servicesTabTemplate">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Servicios</h2>
+        </div>
+    </div>
+    <div class="row">
+        {{for columns tmpl="serviceColumnTemplate" /}}
+    </div>
+</script>
+
+<script type="text/x-jsrender" id="serviceColumnTemplate">
+    <div class="col-md-3">
+        <h4>{{:label}}</h4>
+        <ul>
+            {{for services}}
+                <li>{{:value}}</li>
+            {{/for}}
+        </ul>
+    </div>
+</script>
 </body>
 </html>

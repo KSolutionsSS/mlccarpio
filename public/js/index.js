@@ -3,6 +3,10 @@
  * Created on 12/03/14, at 13:34.
  */
 
+var SERVICES_GOOGLE_SPREADSHEET_KEY = '167G-zhvVs6y1cZ09Q478G81zZDfGB3Z7EpvljaWY4ew';
+var SERVICES_GOOGLE_SPREADSHEET_URL = 'https://spreadsheets.google.com/feeds/cells/' + SERVICES_GOOGLE_SPREADSHEET_KEY + '/0/public/basic?alt=json';
+var EMPTY_CELL_INDICATOR = '-';
+
 var views = {};
 views.home = (function () {
 
@@ -63,8 +67,92 @@ views.home = (function () {
     };
 }());
 
+views.services = (function () {
+
+    var loadServices = function () {
+        var parseColumnsFromRows = function (services) {
+            var columns = {};
+
+            for (var eachAttribute in services[0]) {
+                if (services[0].hasOwnProperty(eachAttribute)) {
+                    columns[eachAttribute] = [services[0][eachAttribute]];
+                }
+            }
+
+            for (var i = 1; i < services.length; i++) {
+                var eachService = services[i];
+
+                for (eachAttribute in eachService) {
+                    if (eachService.hasOwnProperty(eachAttribute)) {
+                        if (eachService[eachAttribute] !== EMPTY_CELL_INDICATOR) {
+                            columns[eachAttribute].push(eachService[eachAttribute]);
+                        }
+                    }
+                }
+            }
+
+            return columns;
+        };
+
+        var renderServices = function ($container, services) {
+            $container.empty();
+
+            var columns = [];
+            for (var eachColumn in services) {
+                if (services.hasOwnProperty(eachColumn)) {
+                    columns.push({
+                                     label: eachColumn,
+                                     services: (function () {
+                                         var arr = [];
+                                         for (var i = 0; i < services[eachColumn].length; i++) {
+                                             arr.push({value: services[eachColumn][i]});
+                                         }
+                                         return arr;
+                                     }())
+
+                                 });
+                }
+            }
+
+            $container.append($.render.servicesTab({columns: columns}));
+        };
+
+        googleDocsSimpleParser.parseSpreadsheetCellsUrl({
+                                                            url: SERVICES_GOOGLE_SPREADSHEET_URL,
+                                                            done: function (services) {
+                                                                renderServices($('#services').find('.my-content'), parseColumnsFromRows(services));
+                                                            },
+                                                            fail: function (jqXHR, textStatus, errorThrown) {
+                                                                console.log('An error occurred while getting services from Google Spreadsheet:'
+                                                                                + textStatus);
+                                                            }
+                                                        });
+    };
+
+    return {
+        init: function () {
+            loadServices();
+        }
+    };
+}());
+
 $(document).ready(function () {
+    var setUpJSRenderTemplates = function () {
+        $.templates({
+                        servicesTab: {
+                            markup: '#servicesTabTemplate'
+                        },
+                        serviceColumnTemplate: {
+                            markup: '#serviceColumnTemplate'
+                        }
+                    });
+    };
+
     console.log('JQuery configured successfully.');
 
+    setUpJSRenderTemplates();
+    console.log('JSRender templates configured successfully.');
+
     views.home.init();
+    views.services.init();
 });
