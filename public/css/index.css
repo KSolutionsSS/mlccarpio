@@ -40,8 +40,8 @@ header {
 header img {
     position: absolute;
     z-index: 999;
-    top: 4%;
-    left: 15%;
+    top: -3%;
+    left: 12%;
 }
 
 body > div.container {
@@ -160,7 +160,7 @@ footer > .row:first-child > .row:nth-child(3) {
 
 footer > div.row:first-child img {
     position: relative;
-    top: -60px;
+    top: -208px;
 }
 
 footer > .row:last-child {
