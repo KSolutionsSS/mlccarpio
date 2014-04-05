@@ -301,23 +301,33 @@ footer > .row:last-child ul li a:hover {
 /*  MEDIA QUERIES */
 /*****************************************************************************/
 
-@media (min-width: 750px) {
-    #container > ul > li:first-child {
-        margin-left: 350px;
-    }
-}
-
-@media (min-width: 970px) {
+@media (min-width: 768px) {
     #container > ul > li:first-child {
         margin-left: 350px;
     }
 
     header img {
-        left: 12%;
+        left: 3%;
     }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 880px) {
+    header img {
+        left: 7%;
+    }
+}
+
+@media (min-width: 992px) {
+    #container > ul > li:first-child {
+        margin-left: 550px;
+    }
+
+    header img {
+        left: 2%;
+    }
+}
+
+@media (min-width: 1096px) {
     #container > ul > li:first-child {
         margin-left: 575px;
     }
@@ -327,12 +337,22 @@ footer > .row:last-child ul li a:hover {
     }
 }
 
+@media (min-width: 1200px) {
+    #container > ul > li:first-child {
+        margin-left: 770px;
+    }
+
+    header img {
+        left: 5%;
+    }
+}
+
 @media (min-width: 1350px) {
     #container > ul > li:first-child {
         margin-left: 770px;
     }
 
     header img {
-        left: 12%;
+        left: 14%;
     }
 }
