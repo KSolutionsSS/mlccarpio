@@ -73,7 +73,6 @@ body > div.container {
 #container > .tab-content-parent {
     background-color: white;
     border: 1px solid #dddddd;
-    padding: 10px 30px 0 0;
     border-top: none;
 }
 
@@ -88,12 +87,16 @@ body > div.container {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+#myTabContent .tab-pane {
+    margin-bottom: 30px;
+}
+
 /*****************************************************************************/
 /*  HOME STYLES */
 /*****************************************************************************/
 
 #home {
-    margin-left: 30px;
+    margin: 0 30px;
 }
 
 /*****************************************************************************/
@@ -106,7 +109,11 @@ body > div.container {
 
 #profile {
     border-right: 2px solid #dddddd;
+    margin: 0 30px 0 0;
+}
 
+#profile img.nb-fix {
+    margin-bottom: -30px;
 }
 
 /*****************************************************************************/
@@ -127,8 +134,11 @@ body > div.container {
     font-size: smaller;
 }
 
-#services .my-content {
-    margin-left: 30px;
+#services {
+    margin: 0 30px;
+    border-right: #ddd 2px solid;
+    border-left: #ddd 2px solid;
+    padding: 0 50px;
 }
 
 /*****************************************************************************/
