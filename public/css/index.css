@@ -302,8 +302,13 @@ footer > .row:last-child ul li a:hover {
 /*****************************************************************************/
 
 @media (min-width: 768px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 700px;
+    }
+    
     #container > ul > li:first-child {
-        margin-left: 350px;
+        margin-left: 315px;
     }
 
     header img {
@@ -312,24 +317,39 @@ footer > .row:last-child ul li a:hover {
 }
 
 @media (min-width: 880px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 760px;
+    }
+    
     header img {
         left: 7%;
     }
 }
 
 @media (min-width: 992px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 850px;
+    }
+    
     #container > ul > li:first-child {
-        margin-left: 550px;
+        margin-left: 460px;
     }
 
     header img {
-        left: 2%;
+        left: 7%;
     }
 }
 
 @media (min-width: 1096px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 900px;
+    }
+    
     #container > ul > li:first-child {
-        margin-left: 575px;
+        margin-left: 510px;
     }
 
     header img {
@@ -338,21 +358,37 @@ footer > .row:last-child ul li a:hover {
 }
 
 @media (min-width: 1200px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 900px;
+    }
+    
     #container > ul > li:first-child {
-        margin-left: 770px;
+        margin-left: 510px;
     }
 
     header img {
-        left: 5%;
+        left: 13%;
     }
 }
 
 @media (min-width: 1350px) {
+    /*Achico el ancho default de Bootstrap*/
+    .container {
+        width: 1024px;
+    }
+    
     #container > ul > li:first-child {
-        margin-left: 770px;
+        margin-left: 625px;
     }
 
     header img {
         left: 14%;
+    }
+}
+
+@media (min-width: 1475px) {
+    header img {
+        left: 18%;
     }
 }
