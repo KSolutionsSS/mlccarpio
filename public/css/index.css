@@ -68,12 +68,16 @@ body > div.container {
     border-top: #ddd 2px solid;
     border-left: #ddd 1px solid;
     border-right: #ddd 1px solid;
+    /* display: none; */
 }
 
 #container > .tab-content-parent {
     background-color: white;
     border: 1px solid #dddddd;
     border-top: none;
+    margin-top: -60px;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
 }
 
 #container > ul > li > a {
@@ -87,7 +91,7 @@ body > div.container {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-#myTabContent .tab-pane {
+#myTabContent .tab-pane:not(#home) {
     margin-bottom: 30px;
 }
 
@@ -96,7 +100,12 @@ body > div.container {
 /*****************************************************************************/
 
 #home {
-    margin: 0 30px;
+    margin: 0 30px 10px;
+}
+
+#sliderContainer {
+    position: relative;;
+    z-index: 2;
 }
 
 /*****************************************************************************/
@@ -306,7 +315,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 700px;
     }
-    
+
     #container > ul > li:first-child {
         margin-left: 315px;
     }
@@ -321,7 +330,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 760px;
     }
-    
+
     header img {
         left: 7%;
     }
@@ -332,7 +341,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 850px;
     }
-    
+
     #container > ul > li:first-child {
         margin-left: 460px;
     }
@@ -347,7 +356,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 900px;
     }
-    
+
     #container > ul > li:first-child {
         margin-left: 510px;
     }
@@ -362,7 +371,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 900px;
     }
-    
+
     #container > ul > li:first-child {
         margin-left: 510px;
     }
@@ -377,7 +386,7 @@ footer > .row:last-child ul li a:hover {
     .container {
         width: 1024px;
     }
-    
+
     #container > ul > li:first-child {
         margin-left: 625px;
     }

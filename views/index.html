@@ -48,13 +48,14 @@
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="home">
 
-                            <div id="sliderContainer" style="position: relative; top: -80px; left: 0; width: 600px; height: 300px; z-index: 2">
+                            <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+                            <div id="sliderContainer" style="top: 0; left: 0; width: 600px; height: 300px">
                                 <!-- Slides Container -->
-                                <div u="slides"
-                                     style="cursor: move; position: absolute; overflow: hidden; left: 0; top: 0; width: 600px; height: 300px;">
+                                <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0; top: 0; width: 600px; height: 300px;">
                                     <div><img u="image" src="../img/carousel/sitioenconstruccion-01.png"/></div>
-                                    <div><img u="image" src="../img/carousel/sitioenconstruccion-01.png"/></div>
-                                    <div><img u="image" src="../img/carousel/sitioenconstruccion-01.png"/></div>
+                                    <div><img u="image" src="../img/carousel/01.jpg"/></div>
+                                    <div><img u="image" src="../img/carousel/02.jpg"/></div>
+                                    <div><img u="image" src="../img/carousel/03.jpg"/></div>
                                 </div>
                             </div>
 
@@ -165,6 +166,7 @@
     <div class="row">
         {{for columns tmpl="serviceColumnTemplate" /}}
     </div>
+
 </script>
 
 <script type="text/x-jsrender" id="serviceColumnTemplate">
@@ -176,6 +178,7 @@
             {{/for}}
         </ul>
     </div>
+
 </script>
 </body>
 </html>
