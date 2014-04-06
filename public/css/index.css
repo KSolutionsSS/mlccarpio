@@ -108,6 +108,18 @@ body > div.container {
     z-index: 2;
 }
 
+#home span[u="arrowleft"], #home span[u="arrowright"] {
+    z-index: 2;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#home .jssord05l, #home .jssord05r, #home .jssord05ldn, #home .jssord05rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+}
+
 /*****************************************************************************/
 /*  PROFILE STYLES */
 /*****************************************************************************/

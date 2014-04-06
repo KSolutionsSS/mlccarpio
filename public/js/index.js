@@ -10,12 +10,17 @@ var EMPTY_CELL_INDICATOR = '-';
 var views = {};
 views.home = (function () {
 
+    var $viewContainer = $('#home');
+
     var initSlider = function () {
-        var makeItResponsive = function (sliderContainer) {
-            //  Responsive code begin
-            //  You can remove responsive code if you don't want the slider scales while window resizes
+
+        /**
+         * You can remove responsive code if you don't want the slider scales while window resizes
+         * @param $sliderContainer
+         */
+        var makeItResponsive = function ($sliderContainer) {
             function ScaleSlider() {
-                var parentWidth = $('#sliderContainer').parent().width();
+                var parentWidth = $sliderContainer.parent().width();
                 if (parentWidth) {
                     slider.$SetScaleWidth(parentWidth);
                 } else {
@@ -26,18 +31,36 @@ views.home = (function () {
             //  Scale slider after document ready
             ScaleSlider();
             if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                //Capture window resize event
+                //  Capture window resize event
                 $(window).bind('resize', ScaleSlider);
             }
-            //  Responsive code end
         };
 
-        var options = {};
+        var options = {
+            $AutoPlay: true,                        //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+            $AutoPlayInterval: 3000,                //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
 
-        var sliderContainerId = 'sliderContainer';
-        var slider = new $JssorSlider$(sliderContainerId, options);
+            $SlideDuration: 800,                    //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
 
-        makeItResponsive($('#' + sliderContainerId));
+            $DirectionNavigatorOptions: {           //[Optional] Options to specify and enable direction navigator or not
+                $Class: $JssorDirectionNavigator$,  //[Requried] Class to create direction navigator instance
+                $ChanceToShow: 2,                   //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $AutoCenter: 2,                     //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                $Steps: 1                           //[Optional] Steps to go for each navigation request, default value is 1
+            }
+        };
+
+        var $sliderContainer = $('#sliderContainer');
+        var slider = new $JssorSlider$($sliderContainer.attr('id'), options);
+        makeItResponsive($sliderContainer);
+
+        /**
+         * Fix styles that the framework is not taking into account in the STYLE attribute in markup.
+         */
+        (function () {
+            $viewContainer.find('span[u="arrowleft"]').css('top', '183px');
+            $viewContainer.find('span[u="arrowright"]').css('top', '183px');
+        }());
     };
 
     return {
