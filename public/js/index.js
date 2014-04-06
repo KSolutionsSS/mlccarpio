@@ -11,10 +11,10 @@ var views = {};
 views.home = (function () {
 
     var initSlider = function () {
-        var makeItResponsive = function (slider, sliderContainer) {
+        var makeItResponsive = function (sliderContainer) {
             //  Responsive code begin
             //  You can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider(slider) {
+            function ScaleSlider() {
                 var parentWidth = $('#sliderContainer').parent().width();
                 if (parentWidth) {
                     slider.$SetScaleWidth(parentWidth);
@@ -24,7 +24,7 @@ views.home = (function () {
             }
 
             //  Scale slider after document ready
-            ScaleSlider(slider);
+            ScaleSlider();
             if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
                 //Capture window resize event
                 $(window).bind('resize', ScaleSlider);
@@ -37,7 +37,7 @@ views.home = (function () {
         var sliderContainerId = 'sliderContainer';
         var slider = new $JssorSlider$(sliderContainerId, options);
 
-        makeItResponsive(slider, $('#' + sliderContainerId));
+        makeItResponsive($('#' + sliderContainerId));
     };
 
     return {
