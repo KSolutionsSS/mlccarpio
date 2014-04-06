@@ -108,6 +108,10 @@ body > div.container {
     z-index: 2;
 }
 
+/**********************************************/
+/*  Jssor slider direction navigator skin 05  */
+/**********************************************/
+
 #home span[u="arrowleft"], #home span[u="arrowright"] {
     z-index: 2;
     font-size: 1.5em;
@@ -118,6 +122,30 @@ body > div.container {
     position: absolute;
     cursor: pointer;
     display: block;
+}
+
+/************************************/
+/*  Jssor slider navigator skin 01  */
+/************************************/
+
+#home div[u="navigator"] {
+    position: absolute;
+    bottom: 2px;
+    left: 28px;
+}
+
+/*
+.jssorn01 div           (normal)
+.jssorn01 div:hover     (normal mouseover)
+.jssorn01 .av           (active)
+.jssorn01 .av:hover     (active mouseover)
+.jssorn01 .dn           (mousedown)
+*/
+#home .jssorn01 div, #home .jssorn01 div:hover, #home .jssorn01 .av {
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.5em;
 }
 
 /*****************************************************************************/
@@ -411,5 +439,6 @@ footer > .row:last-child ul li a:hover {
 @media (min-width: 1475px) {
     header img {
         left: 18%;
+
     }
 }

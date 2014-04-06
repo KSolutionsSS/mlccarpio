@@ -42,6 +42,14 @@ views.home = (function () {
 
             $SlideDuration: 800,                    //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
 
+            $NavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                $Class: $JssorNavigator$,                       //[Required] Class to create navigator instance
+                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                $SpacingX: 2,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
+            },
+
             $DirectionNavigatorOptions: {           //[Optional] Options to specify and enable direction navigator or not
                 $Class: $JssorDirectionNavigator$,  //[Requried] Class to create direction navigator instance
                 $ChanceToShow: 2,                   //[Required] 0 Never, 1 Mouse Over, 2 Always
